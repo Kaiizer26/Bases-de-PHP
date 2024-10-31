@@ -1,5 +1,4 @@
 <?php include_once "fonctions/fonctions.php" ?>
-<?php include_once "fonctions/fonctionsCategories.php"?>
 <?php include "templates/header.php" ?>
 
     <h1>Base de données</h1>
