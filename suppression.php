@@ -22,7 +22,7 @@
     }
     ?>
     <?php if($categorieSelect){ ?>
-    <form action="index.php" method="POST">
+    <form action="categories.php" method="POST">
         <input type="hidden" name="type_form" value="categorie">
         <input type="hidden" name="id" value="<?php echo $categorieSelect['id']?>">
         <input type="hidden" name="suppr" value="1">
