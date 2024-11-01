@@ -19,7 +19,7 @@
         foreach ($produits as $key => $produit) { ?>
         <article>
             <p onclick="<?php ?>"><?php echo $produit['id'] . ' | ' . $produit['titre']. ' | ' . $produit['description']. ' | ' . $produit['prix']. ' | ' . $produit['categorie']; ?></p>
-            <p><a href="edit.php?id=<?= $produit['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $produit['id'] ?>">Supprimer</a></p>
+            <p><a href="edit.php?type=produit&id=<?= $produit['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $produit['id'] ?>">Supprimer</a></p>
         </article>
         <?php
         }

@@ -16,7 +16,7 @@
             foreach ($categories as $key => $categorie) { ?>
                 <article>
                     <p><a href="categories.php?categorie_id=<?php echo $categorie['id'];?>"><?php echo $categorie['id'] . ' | ' . $categorie['titre']; ?></a></p>
-                    <p><a href="edit.php?id=<?= $categorie['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $categorie['id'] ?>">Supprimer</a></p>
+                    <p><a href="edit.php?type=categorie&id=<?= $categorie['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $categorie['id'] ?>">Supprimer</a></p>
                 </article>
         <?php
             }
@@ -37,7 +37,7 @@
             foreach ($produits as $key => $produit) { ?>
                 <article>
                     <p><?php echo $produit['id'] . ' | ' . $produit['titre'] . ' | ' . $produit['description'] . ' | ' . $produit['prix'] . ' | ' . $produit['categorie']; ?></p>
-                    <p><a href="edit.php?id=<?= $produit['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $produit['id'] ?>">Supprimer</a></p>
+                    <p><a href="edit.php?type=categorie&id=<?= $produit['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $produit['id'] ?>">Supprimer</a></p>
                 </article>
     <?php
             }
