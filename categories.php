@@ -15,7 +15,7 @@
         if (count($categories) > 0) {
             foreach ($categories as $key => $categorie) { ?>
                 <article>
-                    <p onclick="<?php $produits = produitsParCategorie($mysqlclient, $categorie['id']) ?>"><?php echo $categorie['id'] . ' | ' . $categorie['titre']; ?></p>
+                    <p><a href="categories.php?categorie_id=<?php echo $categorie['id'];?>"><?php echo $categorie['id'] . ' | ' . $categorie['titre']; ?></a></p>
                     <p><a href="edit.php?id=<?= $categorie['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $categorie['id'] ?>">Supprimer</a></p>
                 </article>
         <?php
@@ -29,7 +29,9 @@
     <h2>Catégorie :<?php ?></h2>
     <!-- $produits = produitsParCategorie($mysqlclient, $id); -->
     <?php
-    if (isset($produits)) {
+    if (isset($_GET['categorie_id']) && is_numeric($_GET['categorie_id'])){
+        $categorie_id = $_GET['categorie_id'];
+        $produits = produitsParCategorie($mysqlclient, $categorie_id);
         if (count($produits) > 0) {
             foreach ($produits as $key => $produit) { ?>
                 <article>
