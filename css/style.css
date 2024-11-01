@@ -1,17 +1,52 @@
+@font-face {
+    font-family: 'Chopin';
+    src: url(../assets/fonts/OTF/Chopin-Trial-Medium.otf);
+}
 body{
     /* background-color: red; */
+    font-family: 'Chopin', sans-serif;
     margin: 0;
+    color: #8e92aa;
 }
 
+a{
+    text-decoration: none;
+    color: #8e92aa;
+}
 nav{
+    
     background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* height: 100%; */
+    /* border: solid red; */
+}
+
+nav article{
+    margin: 0 3em;
+    display: flex;
+    align-items: center;
 }
 nav img{
+    width: 35px;
+}
+nav a{
+    text-decoration: none;
+    color: #B83BFE;
+    margin: 0 2em;
+    /* border: solid red; */
+}
+
+nav img#logo{
     width: 150px;
-    fill: white;
     
 }
 
+main{
+    background-color: #0A0A0F;
+    /* border: solid red; */
+}
 main.categories section{
     display: grid;
     grid-template-columns: repeat(5, 1fr);

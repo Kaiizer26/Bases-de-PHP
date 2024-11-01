@@ -1,6 +1,6 @@
 <?php include_once "fonctions/fonctions.php" ?>
 <?php include "templates/header.php" ?>
-
+<main class="index">
     <h1>Base de données</h1>
 
     <h2>Formulaire pour les utilisateurs</h2>
@@ -11,22 +11,22 @@
         <input type="number" name="age" id="age" placeholder="age">
         <input type="submit" value="envoyer">
     </form>
-    
+
     <h2>Liste des users</h2>
     <?php
     $users = userALL($mysqlclient);
-    
-    if(count($users)>0){
-        foreach($users as $key => $user){ ?>
-            <p><?php echo $user['id'].' | '.$user['nom'].'|'.$user['prenom'].'|'.$user['age'].'ans';?></p>
-            <p><a href="edit.php?id=<?=$user['id']?>">Editer</a> | <a href="suppression.php?id=<?=$user['id']?>">Supprimer</a></p>
-            
-            <?php
+
+    if (count($users) > 0) {
+        foreach ($users as $key => $user) { ?>
+            <p><?php echo $user['id'] . ' | ' . $user['nom'] . '|' . $user['prenom'] . '|' . $user['age'] . 'ans'; ?></p>
+            <p><a href="edit.php?id=<?= $user['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $user['id'] ?>">Supprimer</a></p>
+
+    <?php
         }
-    }else{
+    } else {
         echo "<p>Pas d'utilisateurs inscrit</p>";
     }
     ?>
 
-    
+</main>
 <?php include "templates/footer.php" ?>

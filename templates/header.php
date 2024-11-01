@@ -12,13 +12,13 @@
     <header>
         <nav>
             <article>
-                <img src="../assets/images/codepeine.svg" alt="logo marque">
+                <img src="../assets/images/codepeine.svg" alt="logo marque" id="logo">
                 <a href="index.php">Users</a>
                 <a href="categories.php">Catégories</a>
                 <a href="produits.php">Produits</a>
             </article>
             <article>
-
+                <img src="../assets/images/lines.svg" alt="lines">
             </article>
         </nav>
     </header>
