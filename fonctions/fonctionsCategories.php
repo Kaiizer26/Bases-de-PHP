@@ -35,6 +35,14 @@ function categorieSelect($mysqlclient, $id){
     return $categorie->fetch(PDO::FETCH_ASSOC);
 }
 
+function produitsParCategorie($mysqlclient, $id){
+    $sqlQuery= 'SELECT * FROM produits WHERE produits.categorie = '.$id.'';
+    $categorie=$mysqlclient->prepare($sqlQuery);
+    $categorie->execute();
+
+    return $categorie->fetchAll(PDO::FETCH_ASSOC);
+}
+
 //Modification d'un user
 function categorieUpdate($mysqlclient,$categorieUpdate){
     $sqlQuery = 'UPDATE categories SET titre=:titre WHERE id= :id';
