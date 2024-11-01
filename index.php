@@ -1,7 +1,6 @@
 <?php include_once "fonctions/fonctions.php" ?>
 <?php include "templates/header.php" ?>
 <main class="index">
-    <h1>Base de données</h1>
 
     <h2>Formulaire pour les utilisateurs</h2>
     <form action="index.php" method="POST">
@@ -13,20 +12,22 @@
     </form>
 
     <h2>Liste des users</h2>
+    <section>
     <?php
     $users = userALL($mysqlclient);
 
     if (count($users) > 0) {
         foreach ($users as $key => $user) { ?>
+        <article>
             <p><?php echo $user['id'] . ' | ' . $user['nom'] . '|' . $user['prenom'] . '|' . $user['age'] . 'ans'; ?></p>
             <p><a href="edit.php?id=<?= $user['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $user['id'] ?>">Supprimer</a></p>
-
+        </article>
     <?php
         }
     } else {
         echo "<p>Pas d'utilisateurs inscrit</p>";
     }
     ?>
-
+    </section>
 </main>
 <?php include "templates/footer.php" ?>

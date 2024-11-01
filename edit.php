@@ -1,15 +1,9 @@
 <?php include_once("fonctions/fonctions.php") ?>
 <?php include_once("fonctions/fonctionsCategories.php") ?>
 <?php include_once("fonctions/fonctionsProduits.php") ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Formulaire d'édition</h1>
+<?php include "templates/header.php" ?>
+<main>
+    <h2>Formulaire d'édition</h2>
     <?php if($userSelect){ ?>
     <form action="index.php" method="POST">
         <input type="hidden" name="type_form" value="user">
@@ -50,5 +44,6 @@
     <?php
     }
     ?>
-</body>
-</html>
+</main>
+
+<?php include "templates/footer.php" ?>

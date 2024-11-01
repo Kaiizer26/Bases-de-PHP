@@ -28,6 +28,7 @@
 
     <h2>Catégorie :<?php ?></h2>
     <!-- $produits = produitsParCategorie($mysqlclient, $id); -->
+     <section class="produit-cat">
     <?php
     if (isset($_GET['categorie_id']) && is_numeric($_GET['categorie_id'])){
         $categorie_id = $_GET['categorie_id'];
@@ -41,10 +42,10 @@
     <?php
             }
         } else {
-            echo "<p>Pas de produit de cette catégorie</p>";
+            echo "<p class='produit-cat'>Pas de produit de cette catégorie</p>";
         }
     }
     ?>
-
+     </section>
 </main>
 <?php include "templates/footer.php" ?>
