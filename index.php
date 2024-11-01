@@ -20,7 +20,7 @@
         foreach ($users as $key => $user) { ?>
         <article>
             <p><?php echo $user['id'] . ' | ' . $user['nom'] . '|' . $user['prenom'] . '|' . $user['age'] . 'ans'; ?></p>
-            <p><a href="edit.php?type=user&id=<?= $user['id'] ?>">Editer</a> | <a href="suppression.php?id=<?= $user['id'] ?>">Supprimer</a></p>
+            <p><a href="edit.php?type=user&id=<?= $user['id'] ?>">Editer</a> | <a href="suppression.php?type=user&id=<?= $user['id'] ?>">Supprimer</a></p>
         </article>
     <?php
         }
